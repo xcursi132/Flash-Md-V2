@@ -14,7 +14,7 @@ function mapPresence(val) {
 module.exports = {
     prefixes: process.env.PREFIX
         ? process.env.PREFIX.split(',').map(p => p.trim())
-        : [''],
+        : ['.'],
 
     NUMBER: process.env.YOUR_NUMBER || '254742063632',
     MODE: (process.env.MODE || 'private').toLowerCase().trim(),
@@ -24,7 +24,7 @@ module.exports = {
     ADM: process.env.ANTIDELETE || 'on',
     AUTO_VIEW_STATUS: process.env.AUTO_READ_STATUS === 'on',
     AUTO_LIKE: process.env.AUTO_LIKE === 'on',
-    AUTO_READ_MESSAGES: process.env.AUTO_READ_DM === 'on',
+    AUTO_READ_MESSAGES: process.env.AUTO_READ_DM === 'false',
     HEROKU_API_KEY: process.env.HEROKU_API_KEY,
     HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
    ALIVE_URL: process.env.ALIVE_URL,
